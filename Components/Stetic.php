@@ -276,7 +276,7 @@ class Stetic
             }
 
             $order_properties['products'] = $products;
-            $order_properties['revenue'] = (float)$total;
+            $order_properties['revenue'] = (float)str_replace(",", ".", $total);
 
             $this->registerEvent('order', $order_properties);
 
