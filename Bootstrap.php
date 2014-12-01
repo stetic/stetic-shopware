@@ -52,14 +52,6 @@ class Shopware_Plugins_Frontend_Stetic_Bootstrap extends Shopware_Components_Plu
 
         $view->steticController = $request->getControllerName();
         $view->steticData = $Stetic->getViewData();
-
-        if(!isset(Shopware()->Session()->steticTest) || !is_array(Shopware()->Session()->steticTest))
-        {
-            Shopware()->Session()->steticTest = array();
-        }
-
-        Shopware()->Session()->steticTest[] = "Hallo " . time();
-
     }
 
     /**
