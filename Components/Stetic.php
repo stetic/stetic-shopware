@@ -226,7 +226,7 @@ class Stetic
                 "total" => (float)str_replace(",", ".", $total),
                 "quantity" => 0.00,
                 "weight" => 0.00,
-                  "discount" => 0.00,
+                "discount" => 0.00,
                 "shipping" => array("type" => $viewAssign["sDispatch"]["name"], "amount" => (float)$viewAssign["sBasket"]['sShippingcostsWithTax']),
             );
 
@@ -276,7 +276,7 @@ class Stetic
             }
 
             $order_properties['products'] = $products;
-            $order_properties['revenue'] = (float)$total_revenue;
+            $order_properties['revenue'] = (float)$total;
 
             $this->registerEvent('order', $order_properties);
 
