@@ -7,4 +7,4 @@ You have to be registered on www.stetic.com
 
 ## Installation
 
-Just copy the files from this repo to engine/Shopware/Plugins/Frontend/Stetic.
+Just copy the files from this repo to engine/Shopware/Plugins/Community/Frontend/Stetic/.
