@@ -373,7 +373,7 @@ class Stetic
         * Product review
         */
         elseif( $controller == 'detail' && $action == 'index' && $this->request->getParam('action') == 'rating' && 
-            $this->request->getParam('sArticle')  && $this->request->getParam('Submit') && $this->config->productReviewTracking )
+            $this->request->getParam('sArticle')  && $this->config->productReviewTracking )
         {
             $product = Shopware()->Modules()->Articles()->sGetArticleById($this->request->getParam('sArticle'));
 
