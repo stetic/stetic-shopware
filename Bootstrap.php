@@ -169,6 +169,7 @@ class Shopware_Plugins_Frontend_Stetic_Bootstrap extends Shopware_Components_Plu
             'onPreDispatch'
         );
         
+	/*
         $event = $this->createHook(
             'Shopware_Controllers_Frontend_Register',
             'savePersonalAction',
@@ -178,6 +179,12 @@ class Shopware_Plugins_Frontend_Stetic_Bootstrap extends Shopware_Components_Plu
         );
     
         $this->subscribeHook($event);
+        */
+
+        $this->subscribeEvent(
+	    'Shopware_Controllers_Frontend_Register::savePersonalAction::after',
+	    'onRegister'
+	);
 
         return true;
     }
