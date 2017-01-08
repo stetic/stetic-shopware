@@ -1,4 +1,4 @@
-{block name='frontend_index_header_javascript' append}
+{block name='frontend_index_header' append}
 <script>
 {literal}
 var _fss=_fss||{}; _fss.token = '{/literal}{$SteticConfig->site_token}{literal}';
@@ -9,8 +9,8 @@ var _fss=_fss||{}; _fss.token = '{/literal}{$SteticConfig->site_token}{literal}'
 </script>
 {/block}
 
-{block name="frontend_index_header_javascript_inline" append}
-{*<script type="text/javascript">*}
+{block name="frontend_index_header_javascript_jquery" append}
+<script>
   $(window).load(function() {
 	  (function(){
 		  
@@ -19,18 +19,18 @@ var _fss=_fss||{}; _fss.token = '{/literal}{$SteticConfig->site_token}{literal}'
 			  
 			  if( controller == 'detail' )
 			  {
-			  	$('#basketButton').bind('click.stetic', function(e) {
+			  	$('.buybox--button').bind('click.stetic', function(e) {
 					
 					var quantity = $('#sQuantity').val(),
 					    product = data.product;
 						
 						product.quantity = quantity;
 						
-						fourstats.track('basket', { product:product });
+						stetic.track('basket', { product:product });
 				});
 			  }
 
 	  })(); 
   });
-{*</script>*}
+</script>
 {/block}

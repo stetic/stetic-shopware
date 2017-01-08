@@ -69,7 +69,7 @@ class Stetic
             $builder->select(array(
                     'customer.id as id',
                     'customer.firstLogin as firstlogin',
-                    'customerBilling.number as customerNumber',
+                    'customer.number as customerNumber',
                     "CONCAT(CONCAT(customerBilling.firstName, ' '), customerBilling.lastName) as name",
                     'customerBilling.company as company',
                     'customer.email as email',
